@@ -14,4 +14,11 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<title>Main page</title>
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<title>Find User</title>
+<t:layout>
+<t:form action="findUser">
+    <t:textfield name="id" label="Enter ID" required="true"/>
+    <t:submit/>
+</t:form>
+</t:layout>

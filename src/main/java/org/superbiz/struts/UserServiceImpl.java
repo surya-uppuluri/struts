@@ -17,28 +17,18 @@
 */
 package org.superbiz.struts;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
-public class UserServiceImpl implements UserService {
+public interface UserServiceImpl extends JpaRepository<User, Long> {
 
-    @PersistenceContext
-    private EntityManager manager;
-
-    public void add(User user) {
-        manager.persist(user);
-    }
-
-    public User find(int id) {
-        return manager.find(User.class, id);
-    }
-
-    public List<User> findAll() {
-        return manager.createQuery("select u from User u").getResultList();
-    }
 
 }

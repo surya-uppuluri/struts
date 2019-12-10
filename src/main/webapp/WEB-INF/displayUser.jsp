@@ -14,20 +14,20 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<title>User Details</title>
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<jsp:useBean id="user" type="org.superbiz.struts.User" scope="request"/>
 
-<h2>User Details </h2>
-<table>
-    <tr>
-        <td><b>ID</b></td>
-        <td>${user.id }</td>
-    </tr>
-    <tr>
-        <td><b>First Name</b></td>
-        <td>${user.firstName }</td>
-    </tr>
-    <tr>
-        <td><b>Last Name</b></td>
-        <td>${user.lastName }</td>
-    </tr>
-</table>
+<t:layout title="User Details">
+    <h2>User Details</h2>
+
+    <dl>
+        <dt>ID</dt>
+        <dd>${user.id}</dd>
+
+        <dt>First Name</dt>
+        <dd>${user.firstName}</dd>
+
+        <dt>Last Name</dt>
+        <dd>${user.lastName}</dd>
+    </dl>
+</t:layout>

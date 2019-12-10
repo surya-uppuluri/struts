@@ -24,14 +24,14 @@ import java.util.List;
 @Component
 public class ListAllUsers {
 
-    private final UserService service;
+    private final UserServiceImpl service;
 
-    public ListAllUsers(UserService service) {
+    public ListAllUsers(UserServiceImpl service) {
         this.service = service;
     }
 
 
-    private int id;
+    private long id;
     private String errorMessage;
     private List<User> users;
 
@@ -51,11 +51,11 @@ public class ListAllUsers {
         this.errorMessage = errorMessage;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
