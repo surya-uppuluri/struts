@@ -1,13 +1,2 @@
-# Struts Example
-
-## Build the app with maven
-
-```
-$ mvn clean package
-```
-
-## Deploy the war to PCF
-
-```
-$ cf push struts-example -p target/struts.war
-```
+# struts
+This application is created as a part of Platform Accelration Lab Training by Pivotal for Cloud Native Architects - Goal is to replatform a legacy STRUTS application to Spring Boot
