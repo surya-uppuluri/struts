@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -47,6 +48,31 @@ public class UserController {
         }
 
         return "displayUser";
+
+    }
+
+
+    @GetMapping("/listAllUsers")
+    public String listAllUsers(Model model) {
+
+        List<User> usersList = userService.findAll();
+        model.addAttribute("users", usersList);
+        return "displayUsers";
+    }
+
+    @PostMapping("/listAllUsers")
+    public String listAllUsersResponse(long id, Model model) {
+        System.out.println("Finding user with id " + id);
+
+        Optional<User> user = userService.findById(id);
+        if (user.isPresent()) {
+            model.addAttribute("user", user.get());
+        } else {
+            model.addAttribute("errorMessage", "User not found");
+            return "findUserForm";
+        }
+
+        return "displayUsers";
 
     }
 
