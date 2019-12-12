@@ -52,7 +52,7 @@ public class UserController {
     }
 
 
-    @GetMapping("/listAllUsers")
+    @GetMapping("/list")
     public String listAllUsers(Model model) {
 
         List<User> usersList = userService.findAll();

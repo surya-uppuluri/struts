@@ -31,15 +31,16 @@ limitations under the License.
 <body>
 <div id='page'>
 
-    <div id='header'><a href="addUserForm.action">Add User</a>
-        | <a href="findUserForm.action">Find User</a>
-        | <a href="listAllUsers.action">List all users</a></div>
+    <div id='header'>
+    <a href="addUser">Add User</a>
+        | <a href="findUser">Find User</a>
+        | <a href="listAllUsers">List all users</a> </div>
     <div id='content'>
         <p style="color: red"><s:property value="errorMessage"/></p>
         <decorator:body/>
 
     </div>
-    <div id='footer'>Footer</div>
+   <!-- <div id='footer'>Footer</div> -->
 </div>
 </body>
 </html>

@@ -11,12 +11,12 @@
 </head>
 <body class="v2">
 <div id="page">
-
+<!--
     <div id="header">
         <a href="addUser">Add User</a>
         <a href="findUser">Find User</a>
         <a href="listAllUsers">List all users</a>
-    </div>
+    </div> -->
 
     <div id="content">
         <jsp:doBody/>
